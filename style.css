@@ -593,23 +593,237 @@ body {
     color: var(--go-green);
 }
 
+.features-card .card-title {
+    font-size: var(--fs-6);
+    margin-block-end: 5px;
+}
 
+.features-card :is(.card-title, .card-text) {
+    transition: var(--transition-1);
+}
 
+.features-card:hover :is(.card-title, .card-text) {
+    color: var(--white);
+}
 
+/* ------------------- FAQ ------------------- */
+.faq .container {
+    display: grid;
+    gap: 20px;
+}
 
+.faq .title-wrapper {
+    background-color: var(--white);
+    padding: 30px 25px;
+    box-shadow: var(--shadow-1);
+}
 
+.faq .section-title {
+    font-size: var(--fs-1);
+    margin-block-end: 30px;
+}
 
+.faq-card {
+    background-color: var(--go-green_5);
+    border-radius: var(--radius-5);
+    overflow: hidden;
+}
 
+.faq-card .card-action {
+    --action-bg: var(--go-green_8);
+    --color: var(--granite-gray);
 
+    background-color: var(--action-bg);
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    gap: 20px;
+    transition: var(--transition-1);
+}
 
+.faq-card .card-action:is(:hover, :focus, .active) {
+    --action-bg: var(--go-green);
+    --color: var(--white);
+}
 
+.faq-card .card-title {
+    color: var(--color);
+    font-size: var(--fs-8);
+    transition: var(--transition-1);
+}
 
+.faq-card ion-icon {
+    color: var(--color);
+    font-size: 15px;
+    transition: var(--transition-1);
+    --ionicon-stoke-width: 60px;
+}
 
+.faq-card .card-action.active .open,
+.faq-card .card-action .close {
+    display: none;
+}
 
+.faq-card .card-action .open,
+.faq-card .card-action.active .close {
+    display: block;
+}
 
+.faq-card .card-content {
+    font-size: var(--fs-10);
+    padding-inline: 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition-1);
+}
 
+.faq-card .card-content p {
+    margin-block: 15px;
+}
 
+.faq-card .card-action.active + .card-content {
+    max-height: 500px;
+}
 
+/* ------------------- FOOTER ------------------- */
+.footer {
+    background-color: var(--rich-black-fogra-29-2);
+    color: var(--cultured);
+}
+
+.footer-top .container {
+    display: grid;
+    gap: 40px;
+}
+
+.footer .logo {
+    color: var(--white);
+}
+
+.footer-text {
+    margin-block: 25px;
+}
+
+.newsletter-form {
+    position: relative;
+    max-width: 350px;
+}
+
+.email-field {
+    color: var(--white);
+    font-size: var(--fs-11);
+    border: 1px solid var(--granite-gray);
+    padding: 15px;
+    border-radius: var(--radius-5);
+}
+
+.footer .form-btn {
+    background-color: var(--go-green);
+    color: var(--white);
+    font-size: 24px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    padding-inline: 10px;
+    border-radius: var(--radius-5);
+}
+
+.footer-list-title {
+    font-family: var(--ff-cuprum);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-600);
+    line-height: 1.2;
+    margin-block-end: 25px;
+}
+
+.footer-link {
+    margin-block-start: 15px;
+    transition: var(--transition-1);
+}
+
+.footer-link:is(:hover, :focus) {
+    color: var(--go-green);
+}
+
+.footer-item,
+.social-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-item {
+    margin-block-start: 15px;
+}
+
+.footer-item > ion-icon {
+    flex-shrink: 0;
+    color: var(--go-green);
+    font-size: 20px;
+    margin-block-start: 3px;
+}
+
+.contact-link {
+    transition: var(--transition-1);
+}
+
+.contact-link:not(.address):is(:hover, :focus) {
+    color: var(--go-green);
+}
+
+.footer-item:last-child {
+    margin-block-start: 25px;
+    padding-block-start: 25px;
+    border-block-start: 1px solid var(--granite-gray);
+}
+
+.social-link {
+    font-size: 14px;
+    border: 1px solid var(--granite-gray);
+    padding: 10px;
+    transition: var(--transition-1);
+}
+
+.social-link:is(:hover, :focus) {
+    background-color: var(--go-green);
+    border-color: var(--go-green);
+}
+
+.footer-bottom {
+    padding-block: 15px;
+    border-block-start: 1px solid var(--jet);
+}
+
+.copyright {
+    font-size: var(--fs-12);
+    text-align: center;
+    margin-block-end: 15px;
+}
+
+.copyright-link {
+    display: inline-block;
+    color: var(--go-green);
+    font-weight: var(--fw-500);
+}
+
+.footer-bottom-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-bottom-link {
+    font-size: var(--fs-11);
+    transition: var(--transition-1);
+}
+
+.footer-bottom-link:is(:hover, :focus) {
+    color: var(--go-green);
+}
 
 
 
@@ -622,3 +836,23 @@ body {
 
 
 /* Creator: thegoddysmart */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
